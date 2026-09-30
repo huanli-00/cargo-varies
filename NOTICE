@@ -1,0 +1,10 @@
+The API dependency graph and generic resolution implementation in
+src/rapx_graph.rs, src/rapx_resolve.rs, and src/rapx_mono.rs adapts code from
+RAPx (Rust Analysis Platform with Extensions), maintained by Artisan-Lab.
+
+Upstream: https://github.com/Artisan-Lab/RAPx
+Source: rapx/src/analysis/core/api_dependency/
+License: Mozilla Public License 2.0 (see LICENSE-MPL).
+
+These files have been modified for cargo-varies, including rustc API updates,
+public API path resolution, and bounded generic solving for wrapper synthesis.

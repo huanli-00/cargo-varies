@@ -1,0 +1,46 @@
+# syntax=docker/dockerfile:1.7
+
+FROM ubuntu:24.04
+
+ARG DEBIAN_FRONTEND=noninteractive
+ENV VARIES_KANI_DIR=/opt/varies-kani
+ENV PATH=/opt/varies-kani/scripts:/opt/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+RUN apt-get update && \
+    apt-get install --no-install-recommends --yes \
+      build-essential \
+      ca-certificates \
+      clang \
+      cmake \
+      curl \
+      file \
+      git \
+      libssl-dev \
+      lld \
+      llvm \
+      llvm-dev \
+      ninja-build \
+      pkg-config \
+      procps \
+      psmisc \
+      python3 \
+      ripgrep \
+      time \
+      unzip \
+      xz-utils \
+      zlib1g \
+      zlib1g-dev && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN printf '%s\n' \
+      '#!/usr/bin/env bash' \
+      'set -euo pipefail' \
+      'export HOME="${HOME:-/tmp/cargo-varies-home}"' \
+      'mkdir -p "$HOME" "${XDG_CACHE_HOME:-$HOME/.cache}" "${XDG_DATA_HOME:-$HOME/.local/share}"' \
+      'exec "$@"' \
+      > /usr/local/bin/cargo-varies-container-entrypoint && \
+    chmod +x /usr/local/bin/cargo-varies-container-entrypoint
+
+WORKDIR /workspace/cargo-varies
+ENTRYPOINT ["/usr/local/bin/cargo-varies-container-entrypoint"]
+CMD ["bash"]

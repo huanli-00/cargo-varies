@@ -1,0 +1,11020 @@
+{
+  "alloc::alloc::Allocator::grow": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "alloc::alloc::Allocator::grow_zeroed": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "alloc::alloc::Allocator::shrink": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "alloc::alloc::GlobalAlloc::alloc_zeroed": {
+    "contracts": {
+      "layout": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "layout"
+    ]
+  },
+  "alloc::alloc::GlobalAlloc::realloc": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "new_size": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout",
+      "new_size"
+    ]
+  },
+  "alloc::alloc::Layout::for_value_raw": {
+    "contracts": {
+      "t": [
+        "Size |",
+        "ValidSlice |",
+        "ValidTraitObj"
+      ]
+    },
+    "params": [
+      "t"
+    ]
+  },
+  "alloc::alloc::Layout::from_size_align_unchecked": {
+    "contracts": {
+      "align": [
+        "ValidNum"
+      ],
+      "size": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "size",
+      "align"
+    ]
+  },
+  "alloc::alloc::alloc": {
+    "contracts": {
+      "layout": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "layout"
+    ]
+  },
+  "alloc::alloc::alloc_zeroed": {
+    "contracts": {
+      "layout": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "layout"
+    ]
+  },
+  "alloc::alloc::dealloc": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout"
+    ]
+  },
+  "alloc::alloc::deallocate": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout"
+    ]
+  },
+  "alloc::alloc::grow": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "alloc::alloc::grow_zeroed": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "alloc::alloc::realloc": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "new_size": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout",
+      "new_size"
+    ]
+  },
+  "alloc::alloc::shrink": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "alloc::boxed::Box::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::boxed::Box::downcast_unchecked": {
+    "contracts": {
+      "self": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::boxed::Box::from_non_null": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::boxed::Box::from_non_null_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "raw": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "raw",
+      "alloc"
+    ]
+  },
+  "alloc::boxed::Box::from_raw": {
+    "contracts": {
+      "raw": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "raw"
+    ]
+  },
+  "alloc::boxed::Box::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "raw": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "raw",
+      "alloc"
+    ]
+  },
+  "alloc::boxed::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::boxed::downcast_unchecked": {
+    "contracts": {
+      "self": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::boxed::from_non_null": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::boxed::from_non_null_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "raw": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "raw",
+      "alloc"
+    ]
+  },
+  "alloc::boxed::from_raw": {
+    "contracts": {
+      "raw": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "raw"
+    ]
+  },
+  "alloc::boxed::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "raw": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "raw",
+      "alloc"
+    ]
+  },
+  "alloc::bstr::ByteStr::align_to": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::bstr::ByteStr::align_to_mut": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::bstr::ByteStr::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::bstr::ByteStr::as_chunks_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "alloc::bstr::ByteStr::as_chunks_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "alloc::bstr::ByteStr::get_disjoint_unchecked_mut": {
+    "contracts": {
+      "indices": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "indices"
+    ]
+  },
+  "alloc::bstr::ByteStr::get_unchecked": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "alloc::bstr::ByteStr::get_unchecked_mut": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "alloc::bstr::ByteStr::split_at_mut_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "alloc::bstr::ByteStr::split_at_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "alloc::bstr::ByteStr::swap_unchecked": {
+    "contracts": {
+      "a": [
+        "InBounded"
+      ],
+      "b": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "a",
+      "b"
+    ]
+  },
+  "alloc::collections::btree::map::insert_after_unchecked": {
+    "contracts": {
+      "key": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "key",
+      "value"
+    ]
+  },
+  "alloc::collections::btree::map::insert_before_unchecked": {
+    "contracts": {
+      "key": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "key",
+      "value"
+    ]
+  },
+  "alloc::collections::btree::map::with_mutable_key": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::collections::btree::set::insert_after_unchecked": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "alloc::collections::btree::set::insert_before_unchecked": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "alloc::collections::btree::set::upper_bound_mut": {
+    "contracts": {
+      "bound": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "bound"
+    ]
+  },
+  "alloc::collections::btree::set::with_mutable_key": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::collections::btree_map::CursorMut::insert_after_unchecked": {
+    "contracts": {
+      "key": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "key",
+      "value"
+    ]
+  },
+  "alloc::collections::btree_map::CursorMut::insert_before_unchecked": {
+    "contracts": {
+      "key": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "key",
+      "value"
+    ]
+  },
+  "alloc::collections::btree_map::CursorMut::with_mutable_key": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::collections::btree_map::CursorMutKey::insert_after_unchecked": {
+    "contracts": {
+      "key": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "key",
+      "value"
+    ]
+  },
+  "alloc::collections::btree_map::CursorMutKey::insert_before_unchecked": {
+    "contracts": {
+      "key": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "key",
+      "value"
+    ]
+  },
+  "alloc::collections::btree_set::CursorMut::insert_after_unchecked": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "alloc::collections::btree_set::CursorMut::insert_before_unchecked": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "alloc::collections::btree_set::CursorMut::with_mutable_key": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::collections::btree_set::CursorMutKey::insert_after_unchecked": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "alloc::collections::btree_set::CursorMutKey::insert_before_unchecked": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "alloc::ffi::CString::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::ffi::CString::from_vec_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "alloc::ffi::CString::from_vec_with_nul_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidCStr"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "alloc::ffi::c_str::CString::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::ffi::c_str::CString::from_vec_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "alloc::ffi::c_str::CString::from_vec_with_nul_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidCStr"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "alloc::ffi::c_str::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::ffi::c_str::from_vec_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "alloc::ffi::c_str::from_vec_with_nul_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidCStr"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "alloc::rc::Rc::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::rc::Rc::decrement_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::rc::Rc::decrement_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::rc::Rc::downcast_unchecked": {
+    "contracts": {
+      "self": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::rc::Rc::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::rc::Rc::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::rc::Rc::get_mut_unchecked": {
+    "contracts": {
+      "this": [
+        "Typed",
+        "Alias"
+      ]
+    },
+    "params": [
+      "this"
+    ]
+  },
+  "alloc::rc::Rc::increment_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::rc::Rc::increment_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::rc::Weak::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::rc::Weak::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::rc::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::rc::decrement_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::rc::decrement_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::rc::downcast_unchecked": {
+    "contracts": {
+      "self": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::rc::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::rc::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::rc::get_mut_unchecked": {
+    "contracts": {
+      "this": [
+        "Typed",
+        "Alias"
+      ]
+    },
+    "params": [
+      "this"
+    ]
+  },
+  "alloc::rc::increment_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::rc::increment_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::slice::from_mut_ptr_range": {
+    "contracts": {
+      "range": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "range"
+    ]
+  },
+  "alloc::slice::from_ptr_range": {
+    "contracts": {
+      "range": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "range"
+    ]
+  },
+  "alloc::slice::from_raw_parts": {
+    "contracts": {
+      "data": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ],
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "data",
+      "len"
+    ]
+  },
+  "alloc::slice::from_raw_parts_mut": {
+    "contracts": {
+      "data": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ],
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "data",
+      "len"
+    ]
+  },
+  "alloc::str::from_boxed_utf8_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "alloc::str::from_raw_parts": {
+    "contracts": {
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "len"
+    ]
+  },
+  "alloc::str::from_raw_parts_mut": {
+    "contracts": {
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "len"
+    ]
+  },
+  "alloc::str::from_utf8_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "alloc::str::from_utf8_unchecked_mut": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "alloc::string::String::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::string::String::as_bytes_mut": {
+    "contracts": {
+      "self": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::string::String::as_mut_vec": {
+    "contracts": {
+      "self": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::string::String::from_raw_parts": {
+    "contracts": {
+      "buf": [
+        "Allocated",
+        "Aligned",
+        "ValidNum",
+        "ValidString"
+      ],
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "Init",
+        "ValidNum",
+        "ValidString"
+      ]
+    },
+    "params": [
+      "buf",
+      "length",
+      "capacity"
+    ]
+  },
+  "alloc::string::String::from_utf8_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "alloc::string::String::get_unchecked": {
+    "contracts": {
+      "i": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "i"
+    ]
+  },
+  "alloc::string::String::get_unchecked_mut": {
+    "contracts": {
+      "i": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "i"
+    ]
+  },
+  "alloc::string::String::slice_mut_unchecked": {
+    "contracts": {
+      "begin": [
+        "ValidString",
+        "InBounded"
+      ],
+      "end": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "begin",
+      "end"
+    ]
+  },
+  "alloc::string::String::slice_unchecked": {
+    "contracts": {
+      "begin": [
+        "ValidString",
+        "InBounded"
+      ],
+      "end": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "begin",
+      "end"
+    ]
+  },
+  "alloc::string::as_mut_vec": {
+    "contracts": {
+      "self": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::string::from_raw_parts": {
+    "contracts": {
+      "buf": [
+        "Allocated",
+        "Aligned",
+        "ValidNum",
+        "ValidString"
+      ],
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "ValidNum",
+        "ValidString"
+      ]
+    },
+    "params": [
+      "buf",
+      "length",
+      "capacity"
+    ]
+  },
+  "alloc::string::from_utf8_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "alloc::sync::Arc::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::sync::Arc::decrement_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::sync::Arc::decrement_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::sync::Arc::downcast_unchecked": {
+    "contracts": {
+      "self": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::sync::Arc::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::sync::Arc::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::sync::Arc::get_mut_unchecked": {
+    "contracts": {
+      "this": [
+        "Typed",
+        "Alias"
+      ]
+    },
+    "params": [
+      "this"
+    ]
+  },
+  "alloc::sync::Arc::increment_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::sync::Arc::increment_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::sync::Weak::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::sync::Weak::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::sync::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::sync::decrement_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::sync::decrement_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::sync::downcast_unchecked": {
+    "contracts": {
+      "self": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::sync::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::sync::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::sync::get_mut_unchecked": {
+    "contracts": {
+      "this": [
+        "Typed",
+        "Alias"
+      ]
+    },
+    "params": [
+      "this"
+    ]
+  },
+  "alloc::sync::increment_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "alloc::sync::increment_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "alloc::vec::Vec::align_to": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::vec::Vec::align_to_mut": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "alloc::vec::Vec::as_chunks_unchecked": {
+    "contracts": {
+      "N": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "alloc::vec::Vec::as_chunks_unchecked_mut": {
+    "contracts": {
+      "N": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "alloc::vec::Vec::from_parts": {
+    "contracts": {
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity"
+    ]
+  },
+  "alloc::vec::Vec::from_parts_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity",
+      "alloc"
+    ]
+  },
+  "alloc::vec::Vec::from_raw_parts": {
+    "contracts": {
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity"
+    ]
+  },
+  "alloc::vec::Vec::from_raw_parts_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity",
+      "alloc"
+    ]
+  },
+  "alloc::vec::Vec::get_disjoint_unchecked_mut": {
+    "contracts": {
+      "indices": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "indices"
+    ]
+  },
+  "alloc::vec::Vec::get_unchecked": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "alloc::vec::Vec::get_unchecked_mut": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "alloc::vec::Vec::set_len": {
+    "contracts": {
+      "new_len": [
+        "Init",
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "new_len"
+    ]
+  },
+  "alloc::vec::Vec::split_at_mut_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "alloc::vec::Vec::split_at_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "alloc::vec::Vec::swap_unchecked": {
+    "contracts": {
+      "a": [
+        "InBounded"
+      ],
+      "b": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "a",
+      "b"
+    ]
+  },
+  "alloc::vec::from_parts": {
+    "contracts": {
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity"
+    ]
+  },
+  "alloc::vec::from_parts_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity",
+      "alloc"
+    ]
+  },
+  "alloc::vec::from_raw_parts": {
+    "contracts": {
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity"
+    ]
+  },
+  "alloc::vec::from_raw_parts_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity",
+      "alloc"
+    ]
+  },
+  "alloc::vec::set_len": {
+    "contracts": {
+      "new_len": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "new_len"
+    ]
+  },
+  "core::alloc::Allocator::deallocate": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout"
+    ]
+  },
+  "core::alloc::Allocator::grow": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "core::alloc::Allocator::grow_zeroed": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "core::alloc::Allocator::shrink": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "core::alloc::GlobalAlloc::alloc_zeroed": {
+    "contracts": {
+      "layout": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "layout"
+    ]
+  },
+  "core::alloc::GlobalAlloc::realloc": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "new_size": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout",
+      "new_size"
+    ]
+  },
+  "core::alloc::Layout::for_value_raw": {
+    "contracts": {
+      "t": [
+        "Size |",
+        "ValidSlice |",
+        "ValidTraitObj"
+      ]
+    },
+    "params": [
+      "t"
+    ]
+  },
+  "core::alloc::Layout::from_size_align_unchecked": {
+    "contracts": {
+      "align": [
+        "ValidNum"
+      ],
+      "size": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "size",
+      "align"
+    ]
+  },
+  "core::alloc::deallocate": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout"
+    ]
+  },
+  "core::alloc::global::GlobalAlloc::alloc": {
+    "contracts": {
+      "layout": [
+        "ValidNum",
+        "Init"
+      ]
+    },
+    "params": [
+      "layout"
+    ]
+  },
+  "core::alloc::global::GlobalAlloc::alloc_zeroed": {
+    "contracts": {
+      "layout": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "layout"
+    ]
+  },
+  "core::alloc::global::GlobalAlloc::dealloc": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout"
+    ]
+  },
+  "core::alloc::global::GlobalAlloc::realloc": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "new_size": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout",
+      "new_size"
+    ]
+  },
+  "core::alloc::grow": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "core::alloc::grow_zeroed": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "core::alloc::layout::for_value_raw": {
+    "contracts": {
+      "t": [
+        "Size |",
+        "ValidSlice |",
+        "ValidTraitObj"
+      ]
+    },
+    "params": [
+      "t"
+    ]
+  },
+  "core::alloc::layout::from_size_align_unchecked": {
+    "contracts": {
+      "align": [
+        "ValidNum"
+      ],
+      "size": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "size",
+      "align"
+    ]
+  },
+  "core::alloc::shrink": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "core::any::downcast_mut_unchecked": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::any::downcast_ref_unchecked": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::array::IntoIter::new_unchecked": {
+    "contracts": {
+      "buffer": [
+        "ValidNum",
+        "Init"
+      ]
+    },
+    "params": [
+      "buffer",
+      "initialized"
+    ]
+  },
+  "core::array::ascii::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::array::iter::new_unchecked": {
+    "contracts": {
+      "buffer": [
+        "ValidNum",
+        "Init"
+      ]
+    },
+    "params": [
+      "buffer",
+      "initialized"
+    ]
+  },
+  "core::ascii::Char::digit_unchecked": {
+    "contracts": {
+      "d": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "d"
+    ]
+  },
+  "core::ascii::Char::from_u8_unchecked": {
+    "contracts": {
+      "b": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "b"
+    ]
+  },
+  "core::ascii::ascii_char::digit_unchecked": {
+    "contracts": {
+      "d": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "d"
+    ]
+  },
+  "core::ascii::ascii_char::from_u8_unchecked": {
+    "contracts": {
+      "b": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "b"
+    ]
+  },
+  "core::bstr::ByteStr::align_to": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::bstr::ByteStr::align_to_mut": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::bstr::ByteStr::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::bstr::ByteStr::as_chunks_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "core::bstr::ByteStr::as_chunks_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "core::bstr::ByteStr::get_disjoint_unchecked_mut": {
+    "contracts": {
+      "indices": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "indices"
+    ]
+  },
+  "core::bstr::ByteStr::get_unchecked": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "core::bstr::ByteStr::get_unchecked_mut": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "core::bstr::ByteStr::split_at_mut_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "core::bstr::ByteStr::split_at_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "core::bstr::ByteStr::swap_unchecked": {
+    "contracts": {
+      "a": [
+        "InBounded"
+      ],
+      "b": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "a",
+      "b"
+    ]
+  },
+  "core::cell::RefCell::try_borrow_unguarded": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::cell::UnsafeCell::as_mut_unchecked": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::cell::UnsafeCell::as_ref_unchecked": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::cell::UnsafeCell::replace": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "core::cell::as_mut_unchecked": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::cell::as_ref_unchecked": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::cell::replace": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "core::cell::try_borrow_unguarded": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::char::convert::from_u32_unchecked": {
+    "contracts": {
+      "i": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "i"
+    ]
+  },
+  "core::char::from_u32_unchecked": {
+    "contracts": {
+      "i": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "i"
+    ]
+  },
+  "core::char::methods::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::char::methods::encode_utf8_raw_unchecked": {
+    "contracts": {
+      "code": [
+        "ValidNum"
+      ],
+      "dst": [
+        "ValidPtr"
+      ]
+    },
+    "params": [
+      "code",
+      "dst"
+    ]
+  },
+  "core::char::methods::from_u32_unchecked": {
+    "contracts": {
+      "i": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "i"
+    ]
+  },
+  "core::clone::clone_to_uninit": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "dst"
+    ]
+  },
+  "core::convert::num::FloatToInt::to_int_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::convert::num::to_int_unchecked": {
+    "contracts": {
+      "value": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "value"
+    ]
+  },
+  "core::f128::to_int_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::f16::to_int_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::f32::to_int_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::f64::to_int_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ffi::CStr::from_bytes_with_nul_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidCStr"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "core::ffi::CStr::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidCStr",
+        "ValidPtr",
+        "!Null",
+        "Alias",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::ffi::c_str::CStr::from_bytes_with_nul_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidCStr"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "core::ffi::c_str::CStr::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidCStr",
+        "ValidPtr",
+        "!Null",
+        "Alias",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::ffi::c_str::from_bytes_with_nul_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidCStr"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "core::ffi::c_str::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidCStr",
+        "ValidPtr",
+        "!Null",
+        "Alias",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::ffi::va_list::VaListImpl::arg": {
+    "contracts": {
+      "self": [
+        "InBounded",
+        "Init",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ffi::va_list::VaListImpl::with_copy": {
+    "contracts": {},
+    "params": [
+      "self",
+      "f"
+    ]
+  },
+  "core::ffi::va_list::arg": {
+    "contracts": {
+      "self": [
+        "InBounded",
+        "Init",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ffi::va_list::with_copy": {
+    "contracts": {},
+    "params": [
+      "self",
+      "f"
+    ]
+  },
+  "core::future::async_drop::async_drop_in_place": {
+    "contracts": {
+      "to_drop": [
+        "ValidPtr",
+        "Aligned",
+        "!Null",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "to_drop"
+    ]
+  },
+  "core::hint::assert_unchecked": {
+    "contracts": {
+      "cond": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "cond"
+    ]
+  },
+  "core::hint::unreachable_unchecked": {
+    "contracts": {
+      "function_precondition": [
+        "Unreachable"
+      ]
+    },
+    "params": []
+  },
+  "core::intrinsics::assume": {
+    "contracts": {
+      "b": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "b"
+    ]
+  },
+  "core::intrinsics::const_allocate": {
+    "contracts": {
+      "align": [
+        "ValidNum"
+      ],
+      "size": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "size",
+      "align"
+    ]
+  },
+  "core::intrinsics::const_deallocate": {
+    "contracts": {
+      "align": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "ValidNum"
+      ],
+      "size": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "size",
+      "align"
+    ]
+  },
+  "core::intrinsics::copy": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src",
+      "dst",
+      "count"
+    ]
+  },
+  "core::intrinsics::copy::copy": {
+    "contracts": {
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src",
+      "dst"
+    ]
+  },
+  "core::intrinsics::copy_nonoverlapping": {
+    "contracts": {
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src",
+      "dst"
+    ]
+  },
+  "core::intrinsics::drop_in_place": {
+    "contracts": {
+      "to_drop": [
+        "ValidPtr",
+        "Aligned",
+        "!Null"
+      ]
+    },
+    "params": [
+      "to_drop"
+    ]
+  },
+  "core::intrinsics::float_to_int_unchecked": {
+    "contracts": {
+      "value": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "value"
+    ]
+  },
+  "core::intrinsics::min_align_of_val": {
+    "contracts": {
+      "ptr": [
+        "Size",
+        "ValidSlice",
+        "ValidTraitObj"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::intrinsics::pref_align_of": {
+    "contracts": {},
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::intrinsics::ptr_offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "ptr": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "ptr",
+      "origin"
+    ]
+  },
+  "core::intrinsics::size_of_val": {
+    "contracts": {
+      "ptr": [
+        "Size",
+        "ValidSlice",
+        "ValidTraitObj"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::intrinsics::typed_swap_nonoverlapping": {
+    "contracts": {
+      "x": [
+        "ValidPtr",
+        "NonOverlap"
+      ],
+      "y": [
+        "ValidPtr",
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "x",
+      "y"
+    ]
+  },
+  "core::intrinsics::vtable_align": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::intrinsics::vtable_size": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::intrinsics::write_bytes": {
+    "contracts": {
+      "count": [
+        "ValidPtr"
+      ],
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "dst",
+      "val",
+      "count"
+    ]
+  },
+  "core::io::BorrowedBuf::set_init": {
+    "contracts": {
+      "n": [
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "n"
+    ]
+  },
+  "core::io::BorrowedCursor::advance_unchecked": {
+    "contracts": {
+      "n": [
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "n"
+    ]
+  },
+  "core::io::BorrowedCursor::as_mut": {
+    "contracts": {
+      "function_precondition": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::io::BorrowedCursor::set_init": {
+    "contracts": {
+      "n": [
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "n"
+    ]
+  },
+  "core::io::borrowed_buf::advance_unchecked": {
+    "contracts": {
+      "n": [
+        "Init"
+      ],
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self",
+      "n"
+    ]
+  },
+  "core::io::borrowed_buf::as_mut": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::io::borrowed_buf::set_init": {
+    "contracts": {
+      "n": [
+        "Init"
+      ],
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self",
+      "n"
+    ]
+  },
+  "core::iter::Step::backward_unchecked": {
+    "contracts": {
+      "count": [
+        "ValidNum"
+      ],
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "count"
+    ]
+  },
+  "core::iter::Step::forward_unchecked": {
+    "contracts": {
+      "count": [
+        "ValidNum"
+      ],
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "count"
+    ]
+  },
+  "core::iter::range::Step::backward_unchecked": {
+    "contracts": {
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "n"
+    ]
+  },
+  "core::iter::range::Step::forward_unchecked": {
+    "contracts": {
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "n"
+    ]
+  },
+  "core::iter::range::backward_unchecked": {
+    "contracts": {
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "n"
+    ]
+  },
+  "core::iter::range::forward_unchecked": {
+    "contracts": {
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "n"
+    ]
+  },
+  "core::mem::ManuallyDrop::drop": {
+    "contracts": {
+      "slot": [
+        "Allocated"
+      ]
+    },
+    "params": [
+      "slot"
+    ]
+  },
+  "core::mem::ManuallyDrop::take": {
+    "contracts": {
+      "slot": [
+        "Ownning"
+      ]
+    },
+    "params": [
+      "slot"
+    ]
+  },
+  "core::mem::MaybeUninit::array_assume_init": {
+    "contracts": {
+      "array": [
+        "Init"
+      ]
+    },
+    "params": [
+      "array"
+    ]
+  },
+  "core::mem::MaybeUninit::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::mem::MaybeUninit::assume_init_drop": {
+    "contracts": {
+      "self": [
+        "Init",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::mem::MaybeUninit::assume_init_mut": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::mem::MaybeUninit::assume_init_read": {
+    "contracts": {
+      "self": [
+        "Init",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::mem::MaybeUninit::assume_init_ref": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::mem::TransmuteFrom::transmute": {
+    "contracts": {
+      "src": [
+        "DoubleAligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "core::mem::align_of_val_raw": {
+    "contracts": {
+      "val": [
+        "Size",
+        "ValidSlice",
+        "ValidTraitObj"
+      ]
+    },
+    "params": [
+      "val"
+    ]
+  },
+  "core::mem::manually_drop::drop": {
+    "contracts": {
+      "slot": [
+        "Allocated"
+      ]
+    },
+    "params": [
+      "slot"
+    ]
+  },
+  "core::mem::manually_drop::take": {
+    "contracts": {
+      "slot": [
+        "Ownning"
+      ]
+    },
+    "params": [
+      "slot"
+    ]
+  },
+  "core::mem::maybe_uninit::array_assume_init": {
+    "contracts": {
+      "array": [
+        "Init"
+      ]
+    },
+    "params": [
+      "array"
+    ]
+  },
+  "core::mem::maybe_uninit::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::mem::maybe_uninit::assume_init_drop": {
+    "contracts": {
+      "self": [
+        "Init",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::mem::maybe_uninit::assume_init_mut": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::mem::maybe_uninit::assume_init_read": {
+    "contracts": {
+      "self": [
+        "Init",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::mem::maybe_uninit::assume_init_ref": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::mem::maybe_uninit::slice_assume_init_mut": {
+    "contracts": {
+      "slice": [
+        "Init"
+      ]
+    },
+    "params": [
+      "slice"
+    ]
+  },
+  "core::mem::maybe_uninit::slice_assume_init_ref": {
+    "contracts": {
+      "slice": [
+        "Init"
+      ]
+    },
+    "params": [
+      "slice"
+    ]
+  },
+  "core::mem::size_of_val_raw": {
+    "contracts": {
+      "val": [
+        "Size",
+        "ValidSlice",
+        "ValidTraitObj"
+      ]
+    },
+    "params": [
+      "val"
+    ]
+  },
+  "core::mem::transmutability::TransmuteFrom::transmute": {
+    "contracts": {
+      "src": [
+        "DoubleAligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "core::mem::transmute": {
+    "contracts": {
+      "src": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "core::mem::transmute_copy": {
+    "contracts": {
+      "src": [
+        "DoubleAligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "core::mem::uninitialized": {
+    "contracts": {
+      "function_precondition": [
+        "ValidNum"
+      ]
+    },
+    "params": []
+  },
+  "core::mem::zeroed": {
+    "contracts": {
+      "function_precondition": [
+        "Typed"
+      ]
+    },
+    "params": []
+  },
+  "core::num::NonZero::from_mut_unchecked": {
+    "contracts": {
+      "n": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "n"
+    ]
+  },
+  "core::num::NonZero::new_unchecked": {
+    "contracts": {
+      "n": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "n"
+    ]
+  },
+  "core::num::NonZero::unchecked_add": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "core::num::NonZero::unchecked_mul": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "core::num::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::num::f128::to_int_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::num::f16::to_int_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::num::f32::to_int_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::num::f64::to_int_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::num::nonzero::from_mut_unchecked": {
+    "contracts": {
+      "n": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "n"
+    ]
+  },
+  "core::num::nonzero::new_unchecked": {
+    "contracts": {
+      "n": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "n"
+    ]
+  },
+  "core::num::nonzero::unchecked_add": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "core::num::nonzero::unchecked_mul": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "core::num::unchecked_add": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "core::num::unchecked_mul": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "core::num::unchecked_neg": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::num::unchecked_shl": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "core::num::unchecked_shr": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "core::num::unchecked_sub": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "core::option::Option::unwrap_unchecked": {
+    "contracts": {
+      "self": [
+        "Unwrap"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::option::unwrap_unchecked": {
+    "contracts": {
+      "self": [
+        "Unwrap"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::pin::Pin::get_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::pin::Pin::into_inner_unchecked": {
+    "contracts": {
+      "pointer": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "pointer"
+    ]
+  },
+  "core::pin::Pin::map_unchecked": {
+    "contracts": {
+      "self": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "self",
+      "func"
+    ]
+  },
+  "core::pin::Pin::map_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "self",
+      "func"
+    ]
+  },
+  "core::pin::Pin::new_unchecked": {
+    "contracts": {
+      "pointer": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "pointer"
+    ]
+  },
+  "core::pin::get_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::pin::into_inner_unchecked": {
+    "contracts": {
+      "pointer": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "pointer"
+    ]
+  },
+  "core::pin::map_unchecked": {
+    "contracts": {
+      "self": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "self",
+      "func"
+    ]
+  },
+  "core::pin::map_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "self",
+      "func"
+    ]
+  },
+  "core::pin::new_unchecked": {
+    "contracts": {
+      "pointer": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "pointer"
+    ]
+  },
+  "core::ptr::Alignment::new_unchecked": {
+    "contracts": {
+      "align": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "align"
+    ]
+  },
+  "core::ptr::NonNull::add": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::as_mut": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::NonNull::as_ref": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::NonNull::as_uninit_mut": {
+    "contracts": {
+      "self": [
+        "!Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::NonNull::as_uninit_ref": {
+    "contracts": {
+      "self": [
+        "!Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::NonNull::as_uninit_slice": {
+    "contracts": {
+      "self": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::NonNull::as_uninit_slice_mut": {
+    "contracts": {
+      "self": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::NonNull::byte_add": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::byte_offset": {
+    "contracts": {
+      "count": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::byte_offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::NonNull::byte_offset_from_unsigned": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::NonNull::byte_sub": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::copy_from": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "src",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::copy_from_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "src",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::copy_to": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "dest": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self",
+      "dest",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::copy_to_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "dest": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "dest",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::drop_in_place": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::NonNull::get_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "ValidNum",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "core::ptr::NonNull::new_unchecked": {
+    "contracts": {
+      "ptr": [
+        "!Null"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::ptr::NonNull::offset": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::NonNull::offset_from_unsigned": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::NonNull::read": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::NonNull::read_unaligned": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::NonNull::read_volatile": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::NonNull::replace": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "Init"
+      ]
+    },
+    "params": [
+      "self",
+      "src"
+    ]
+  },
+  "core::ptr::NonNull::sub": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::swap": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ],
+      "with": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "with"
+    ]
+  },
+  "core::ptr::NonNull::write": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "core::ptr::NonNull::write_bytes": {
+    "contracts": {
+      "count": [
+        "ValidPtr"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self",
+      "val",
+      "count"
+    ]
+  },
+  "core::ptr::NonNull::write_unaligned": {
+    "contracts": {
+      "self": [
+        "ValidPtr"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "core::ptr::NonNull::write_volatile": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "core::ptr::alignment::new_unchecked": {
+    "contracts": {
+      "align": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "align"
+    ]
+  },
+  "core::ptr::const_ptr::add": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::const_ptr::as_ref": {
+    "contracts": {
+      "self": [
+        "Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::const_ptr::as_ref_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::const_ptr::as_uninit_ref": {
+    "contracts": {
+      "self": [
+        "Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::const_ptr::as_uninit_slice": {
+    "contracts": {
+      "self": [
+        "Null | ",
+        "ValidPtr",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::const_ptr::byte_add": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::const_ptr::byte_offset": {
+    "contracts": {
+      "count": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::const_ptr::byte_offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::const_ptr::byte_offset_from_unsigned": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::const_ptr::byte_sub": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::const_ptr::copy_to": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "dest": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self",
+      "dest",
+      "count"
+    ]
+  },
+  "core::ptr::const_ptr::copy_to_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "dest": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "dest",
+      "count"
+    ]
+  },
+  "core::ptr::const_ptr::get_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "core::ptr::const_ptr::non_null::sub_ptr": {
+    "contracts": {
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "subtracted": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "subtracted"
+    ]
+  },
+  "core::ptr::const_ptr::offset": {
+    "contracts": {
+      "count": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::const_ptr::offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::const_ptr::offset_from_unsigned": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::const_ptr::read": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "Init",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::const_ptr::read_unaligned": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Init",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::const_ptr::read_volatile": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "Init",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::const_ptr::sub": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::const_ptr::sub_ptr": {
+    "contracts": {
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "subtracted": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "subtracted"
+    ]
+  },
+  "core::ptr::copy": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src",
+      "dst",
+      "count"
+    ]
+  },
+  "core::ptr::copy_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src",
+      "dst",
+      "count"
+    ]
+  },
+  "core::ptr::drop_in_place": {
+    "contracts": {
+      "to_drop": [
+        "ValidPtr",
+        "Aligned",
+        "!Null"
+      ]
+    },
+    "params": [
+      "to_drop"
+    ]
+  },
+  "core::ptr::mut_ptr::add": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::as_mut": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::as_mut_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::as_ref": {
+    "contracts": {
+      "self": [
+        "Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::as_ref_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::as_uninit_mut": {
+    "contracts": {
+      "self": [
+        "!Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::as_uninit_ref": {
+    "contracts": {
+      "self": [
+        "!Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::as_uninit_slice": {
+    "contracts": {
+      "self": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::as_uninit_slice_mut": {
+    "contracts": {
+      "self": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::byte_add": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::byte_offset": {
+    "contracts": {
+      "count": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::byte_offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::mut_ptr::byte_offset_from_unsigned": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::mut_ptr::byte_sub": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::copy_from": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "src",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::copy_from_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "src",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::copy_to": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "dest": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self",
+      "dest",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::copy_to_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "dest": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "dest",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::drop_in_place": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "!Null"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::get_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "ValidNum",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "core::ptr::mut_ptr::offset": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::mut_ptr::offset_from_unsigned": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::mut_ptr::read": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::read_unaligned": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::read_volatile": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::mut_ptr::replace": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "Init"
+      ]
+    },
+    "params": [
+      "self",
+      "src"
+    ]
+  },
+  "core::ptr::mut_ptr::split_at_mut": {
+    "contracts": {
+      "mid": [
+        "ValidNum",
+        "Allocated"
+      ],
+      "self": [
+        "ValidNum",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "core::ptr::mut_ptr::split_at_mut_unchecked": {
+    "contracts": {
+      "mid": [
+        "ValidNum",
+        "Allocated"
+      ],
+      "self": [
+        "ValidNum",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "core::ptr::mut_ptr::sub": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::sub_ptr": {
+    "contracts": {
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "subtracted": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "subtracted"
+    ]
+  },
+  "core::ptr::mut_ptr::swap": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ],
+      "with": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "with"
+    ]
+  },
+  "core::ptr::mut_ptr::write": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "core::ptr::mut_ptr::write_bytes": {
+    "contracts": {
+      "count": [
+        "ValidPtr"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self",
+      "val",
+      "count"
+    ]
+  },
+  "core::ptr::mut_ptr::write_unaligned": {
+    "contracts": {
+      "self": [
+        "ValidPtr"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "core::ptr::mut_ptr::write_volatile": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "core::ptr::non_null::add": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::as_mut": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::non_null::as_ref": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::non_null::as_uninit_mut": {
+    "contracts": {
+      "self": [
+        "!Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::non_null::as_uninit_ref": {
+    "contracts": {
+      "self": [
+        "!Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::non_null::as_uninit_slice": {
+    "contracts": {
+      "self": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::non_null::as_uninit_slice_mut": {
+    "contracts": {
+      "self": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::non_null::byte_add": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::byte_offset": {
+    "contracts": {
+      "count": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::byte_offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::non_null::byte_offset_from_unsigned": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::non_null::byte_sub": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::copy_from": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "src",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::copy_from_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "src",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::copy_to": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "dest": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self",
+      "dest",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::copy_to_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "dest": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "dest",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::drop_in_place": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::non_null::get_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "ValidNum",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "core::ptr::non_null::new_unchecked": {
+    "contracts": {
+      "ptr": [
+        "!Null"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::ptr::non_null::offset": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::non_null::offset_from_unsigned": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "core::ptr::non_null::read": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::non_null::read_unaligned": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::non_null::read_volatile": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::non_null::replace": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "Init"
+      ]
+    },
+    "params": [
+      "self",
+      "src"
+    ]
+  },
+  "core::ptr::non_null::sub": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::sub_ptr": {
+    "contracts": {
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "subtracted": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "subtracted"
+    ]
+  },
+  "core::ptr::non_null::swap": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ],
+      "with": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "with"
+    ]
+  },
+  "core::ptr::non_null::write": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "core::ptr::non_null::write_bytes": {
+    "contracts": {
+      "count": [
+        "ValidPtr"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self",
+      "val",
+      "count"
+    ]
+  },
+  "core::ptr::non_null::write_unaligned": {
+    "contracts": {
+      "self": [
+        "ValidPtr"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "core::ptr::non_null::write_volatile": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "core::ptr::offset": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "ptr": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "count"
+    ]
+  },
+  "core::ptr::read": {
+    "contracts": {
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "Init",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "core::ptr::read_unaligned": {
+    "contracts": {
+      "src": [
+        "ValidPtr",
+        "Init",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "core::ptr::read_volatile": {
+    "contracts": {
+      "src": [
+        "ValidPtr",
+        "Init",
+        "Aligned",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "core::ptr::replace": {
+    "contracts": {
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "Init"
+      ]
+    },
+    "params": [
+      "dst",
+      "src"
+    ]
+  },
+  "core::ptr::swap": {
+    "contracts": {
+      "x": [
+        "ValidPtr",
+        "Aligned"
+      ],
+      "y": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "x",
+      "y"
+    ]
+  },
+  "core::ptr::swap_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap"
+      ],
+      "x": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap"
+      ],
+      "y": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "x",
+      "y",
+      "count"
+    ]
+  },
+  "core::ptr::unique::as_mut": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::unique::as_ref": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::ptr::unique::new_unchecked": {
+    "contracts": {
+      "ptr": [
+        "!Null"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::ptr::write": {
+    "contracts": {
+      "dst": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "dst",
+      "src"
+    ]
+  },
+  "core::ptr::write_bytes": {
+    "contracts": {
+      "count": [
+        "ValidPtr"
+      ],
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "dst",
+      "val",
+      "count"
+    ]
+  },
+  "core::ptr::write_unaligned": {
+    "contracts": {
+      "dst": [
+        "ValidPtr"
+      ]
+    },
+    "params": [
+      "dst",
+      "src"
+    ]
+  },
+  "core::ptr::write_volatile": {
+    "contracts": {
+      "dst": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "dst",
+      "src"
+    ]
+  },
+  "core::range::Step::backward_unchecked": {
+    "contracts": {
+      "count": [
+        "ValidNum"
+      ],
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "count"
+    ]
+  },
+  "core::range::Step::forward_unchecked": {
+    "contracts": {
+      "count": [
+        "ValidNum"
+      ],
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "count"
+    ]
+  },
+  "core::result::Result::unwrap_err_unchecked": {
+    "contracts": {
+      "self": [
+        "Unwrap"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::result::Result::unwrap_unchecked": {
+    "contracts": {
+      "self": [
+        "Unwrap"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::result::unwrap_err_unchecked": {
+    "contracts": {
+      "self": [
+        "Unwrap"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::result::unwrap_unchecked": {
+    "contracts": {
+      "self": [
+        "Unwrap"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::slice::align_to": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::slice::align_to_mut": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::slice::as_chunks_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "core::slice::as_chunks_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "core::slice::ascii::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::slice::from_mut_ptr_range": {
+    "contracts": {
+      "range": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "range"
+    ]
+  },
+  "core::slice::from_ptr_range": {
+    "contracts": {
+      "range": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "range"
+    ]
+  },
+  "core::slice::from_raw_parts": {
+    "contracts": {
+      "data": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ],
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "data",
+      "len"
+    ]
+  },
+  "core::slice::from_raw_parts_mut": {
+    "contracts": {
+      "data": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ],
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "data",
+      "len"
+    ]
+  },
+  "core::slice::get_disjoint_unchecked_mut": {
+    "contracts": {
+      "indices": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "indices"
+    ]
+  },
+  "core::slice::get_unchecked": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "core::slice::get_unchecked_mut": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "core::slice::index::SliceIndex::get_unchecked": {
+    "contracts": {
+      "self": [
+        "InBounded",
+        "Allocated"
+      ],
+      "slice": [
+        "InBounded",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self",
+      "slice"
+    ]
+  },
+  "core::slice::index::SliceIndex::get_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "InBounded",
+        "Allocated"
+      ],
+      "slice": [
+        "InBounded",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self",
+      "slice"
+    ]
+  },
+  "core::slice::index::get_unchecked": {
+    "contracts": {
+      "self": [
+        "Allocated",
+        "InBounded"
+      ],
+      "slice": [
+        "Allocated",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "slice"
+    ]
+  },
+  "core::slice::index::get_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "Allocated",
+        "InBounded"
+      ],
+      "slice": [
+        "Allocated",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "slice"
+    ]
+  },
+  "core::slice::raw::from_mut_ptr_range": {
+    "contracts": {
+      "range": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "range"
+    ]
+  },
+  "core::slice::raw::from_ptr_range": {
+    "contracts": {
+      "range": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned",
+        "InBounded",
+        "!Size"
+      ]
+    },
+    "params": [
+      "range"
+    ]
+  },
+  "core::slice::raw::from_raw_parts": {
+    "contracts": {
+      "data": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ],
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "data",
+      "len"
+    ]
+  },
+  "core::slice::raw::from_raw_parts_mut": {
+    "contracts": {
+      "data": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ],
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "data",
+      "len"
+    ]
+  },
+  "core::slice::split_at_mut_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "core::slice::split_at_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "core::slice::swap_unchecked": {
+    "contracts": {
+      "a": [
+        "InBounded"
+      ],
+      "b": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "a",
+      "b"
+    ]
+  },
+  "core::str::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::str::as_bytes_mut": {
+    "contracts": {
+      "self": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "core::str::converts::from_raw_parts": {
+    "contracts": {
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "len"
+    ]
+  },
+  "core::str::converts::from_raw_parts_mut": {
+    "contracts": {
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "len"
+    ]
+  },
+  "core::str::converts::from_utf8_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "core::str::converts::from_utf8_unchecked_mut": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "core::str::from_raw_parts": {
+    "contracts": {
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "len"
+    ]
+  },
+  "core::str::from_raw_parts_mut": {
+    "contracts": {
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "len"
+    ]
+  },
+  "core::str::from_utf8_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "core::str::from_utf8_unchecked_mut": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "core::str::get_unchecked": {
+    "contracts": {
+      "i": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "i"
+    ]
+  },
+  "core::str::get_unchecked_mut": {
+    "contracts": {
+      "i": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "i"
+    ]
+  },
+  "core::str::slice_mut_unchecked": {
+    "contracts": {
+      "begin": [
+        "ValidString",
+        "InBounded"
+      ],
+      "end": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "begin",
+      "end"
+    ]
+  },
+  "core::str::slice_unchecked": {
+    "contracts": {
+      "begin": [
+        "ValidString",
+        "InBounded"
+      ],
+      "end": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "begin",
+      "end"
+    ]
+  },
+  "core::str::traits::get_unchecked": {
+    "contracts": {
+      "i": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "i"
+    ]
+  },
+  "core::str::traits::get_unchecked_mut": {
+    "contracts": {
+      "i": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "i"
+    ]
+  },
+  "core::sync::atomic::AtomicBool::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicI16::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicI32::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicI64::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicI8::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicIsize::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicPtr::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicU16::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicU32::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicU64::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicU8::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::AtomicUsize::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::sync::atomic::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "core::task::LocalWaker::from_raw": {
+    "contracts": {
+      "waker": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "waker"
+    ]
+  },
+  "core::task::LocalWaker::new": {
+    "contracts": {
+      "data": [
+        "Function_sp"
+      ],
+      "vtable": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "data",
+      "vtable"
+    ]
+  },
+  "core::task::Waker::from_raw": {
+    "contracts": {
+      "waker": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "waker"
+    ]
+  },
+  "core::task::Waker::new": {
+    "contracts": {
+      "data": [
+        "Function_sp"
+      ],
+      "vtable": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "data",
+      "vtable"
+    ]
+  },
+  "core::task::wake::from_raw": {
+    "contracts": {
+      "waker": [
+        "Allocated"
+      ]
+    },
+    "params": [
+      "waker"
+    ]
+  },
+  "core::task::wake::new": {
+    "contracts": {
+      "data": [
+        "System_sp"
+      ]
+    },
+    "params": [
+      "data",
+      "vtable"
+    ]
+  },
+  "std::alloc::Allocator::grow": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "std::alloc::Allocator::grow_zeroed": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "std::alloc::Allocator::shrink": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "std::alloc::GlobalAlloc::alloc_zeroed": {
+    "contracts": {
+      "layout": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "layout"
+    ]
+  },
+  "std::alloc::GlobalAlloc::realloc": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "new_size": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout",
+      "new_size"
+    ]
+  },
+  "std::alloc::Layout::for_value_raw": {
+    "contracts": {
+      "t": [
+        "Size |",
+        "ValidSlice |",
+        "ValidTraitObj"
+      ]
+    },
+    "params": [
+      "t"
+    ]
+  },
+  "std::alloc::Layout::from_size_align_unchecked": {
+    "contracts": {
+      "align": [
+        "ValidNum"
+      ],
+      "size": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "size",
+      "align"
+    ]
+  },
+  "std::alloc::alloc": {
+    "contracts": {
+      "layout": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "layout"
+    ]
+  },
+  "std::alloc::alloc_zeroed": {
+    "contracts": {
+      "layout": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "layout"
+    ]
+  },
+  "std::alloc::dealloc": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout"
+    ]
+  },
+  "std::alloc::deallocate": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout"
+    ]
+  },
+  "std::alloc::grow": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "std::alloc::grow_zeroed": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "std::alloc::realloc": {
+    "contracts": {
+      "layout": [
+        "Allocated",
+        "Layout"
+      ],
+      "new_size": [
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "layout",
+      "new_size"
+    ]
+  },
+  "std::alloc::shrink": {
+    "contracts": {
+      "new_layout": [
+        "Layout",
+        "ValidNum"
+      ],
+      "old_layout": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Layout",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr",
+      "old_layout",
+      "new_layout"
+    ]
+  },
+  "std::array::IntoIter::new_unchecked": {
+    "contracts": {
+      "buffer": [
+        "ValidNum",
+        "Init"
+      ]
+    },
+    "params": [
+      "buffer",
+      "initialized"
+    ]
+  },
+  "std::ascii::Char::digit_unchecked": {
+    "contracts": {
+      "d": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "d"
+    ]
+  },
+  "std::ascii::Char::from_u8_unchecked": {
+    "contracts": {
+      "b": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "b"
+    ]
+  },
+  "std::boxed::Box::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::boxed::Box::downcast_unchecked": {
+    "contracts": {
+      "self": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::boxed::Box::from_non_null": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::boxed::Box::from_non_null_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "raw": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "raw",
+      "alloc"
+    ]
+  },
+  "std::boxed::Box::from_raw": {
+    "contracts": {
+      "raw": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "raw"
+    ]
+  },
+  "std::boxed::Box::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "raw": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "raw",
+      "alloc"
+    ]
+  },
+  "std::bstr::ByteStr::align_to": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::bstr::ByteStr::align_to_mut": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::bstr::ByteStr::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::bstr::ByteStr::as_chunks_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "std::bstr::ByteStr::as_chunks_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "std::bstr::ByteStr::get_disjoint_unchecked_mut": {
+    "contracts": {
+      "indices": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "indices"
+    ]
+  },
+  "std::bstr::ByteStr::get_unchecked": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "std::bstr::ByteStr::get_unchecked_mut": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "std::bstr::ByteStr::split_at_mut_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "std::bstr::ByteStr::split_at_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "std::bstr::ByteStr::swap_unchecked": {
+    "contracts": {
+      "a": [
+        "InBounded"
+      ],
+      "b": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "a",
+      "b"
+    ]
+  },
+  "std::cell::RefCell::try_borrow_unguarded": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::cell::UnsafeCell::as_mut_unchecked": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::cell::UnsafeCell::as_ref_unchecked": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::cell::UnsafeCell::replace": {
+    "contracts": {
+      "self": [
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "std::char::from_u32_unchecked": {
+    "contracts": {
+      "i": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "i"
+    ]
+  },
+  "std::collections::HashMap::get_disjoint_unchecked_mut": {
+    "contracts": {
+      "ks": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "ks"
+    ]
+  },
+  "std::collections::btree_map::CursorMut::insert_after_unchecked": {
+    "contracts": {
+      "key": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "key",
+      "value"
+    ]
+  },
+  "std::collections::btree_map::CursorMut::insert_before_unchecked": {
+    "contracts": {
+      "key": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "key",
+      "value"
+    ]
+  },
+  "std::collections::btree_map::CursorMut::with_mutable_key": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::collections::btree_map::CursorMutKey::insert_after_unchecked": {
+    "contracts": {
+      "key": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "key",
+      "value"
+    ]
+  },
+  "std::collections::btree_map::CursorMutKey::insert_before_unchecked": {
+    "contracts": {
+      "key": [
+        "Function_sp"
+      ],
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "key",
+      "value"
+    ]
+  },
+  "std::collections::btree_set::CursorMut::insert_after_unchecked": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "std::collections::btree_set::CursorMut::insert_before_unchecked": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "std::collections::btree_set::CursorMut::with_mutable_key": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::collections::btree_set::CursorMutKey::insert_after_unchecked": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "std::collections::btree_set::CursorMutKey::insert_before_unchecked": {
+    "contracts": {
+      "self": [
+        "Function_sp"
+      ],
+      "value": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "value"
+    ]
+  },
+  "std::collections::hash::map::get_disjoint_unchecked_mut": {
+    "contracts": {
+      "ks": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "ks"
+    ]
+  },
+  "std::collections::hash::map::get_many_unchecked_mut": {
+    "contracts": {
+      "ks": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "ks"
+    ]
+  },
+  "std::collections::hash_map::HashMap::get_disjoint_unchecked_mut": {
+    "contracts": {
+      "ks": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "ks"
+    ]
+  },
+  "std::env::remove_var": {
+    "contracts": {
+      "key": [
+        "System_sp"
+      ]
+    },
+    "params": [
+      "key"
+    ]
+  },
+  "std::env::set_var": {
+    "contracts": {
+      "key": [
+        "System_sp"
+      ],
+      "value": [
+        "System_sp"
+      ]
+    },
+    "params": [
+      "key",
+      "value"
+    ]
+  },
+  "std::ffi::CStr::from_bytes_with_nul_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidCStr"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "std::ffi::CStr::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidCStr",
+        "ValidPtr",
+        "!Null",
+        "Alias",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::ffi::CString::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::ffi::CString::from_vec_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "std::ffi::CString::from_vec_with_nul_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidCStr"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "std::ffi::OsStr::from_encoded_bytes_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "std::ffi::OsString::from_encoded_bytes_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "std::ffi::VaListImpl::arg": {
+    "contracts": {
+      "self": [
+        "InBounded",
+        "Init",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ffi::VaListImpl::with_copy": {
+    "contracts": {},
+    "params": [
+      "self",
+      "f"
+    ]
+  },
+  "std::ffi::c_str::CStr::from_bytes_with_nul_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidCStr"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "std::ffi::c_str::CStr::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidCStr",
+        "ValidPtr",
+        "!Null",
+        "Alias",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::ffi::c_str::CString::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Ownning",
+        "Alias"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::ffi::c_str::CString::from_vec_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "std::ffi::c_str::CString::from_vec_with_nul_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidCStr"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "std::ffi::os_str::OsStr::from_encoded_bytes_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "std::ffi::os_str::OsString::from_encoded_bytes_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "std::ffi::os_str::clone_to_uninit": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "dst"
+    ]
+  },
+  "std::ffi::os_str::from_encoded_bytes_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "std::from_raw_handle": {
+    "contracts": {
+      "raw_handle": [
+        "System_sp"
+      ]
+    },
+    "params": [
+      "raw_handle"
+    ]
+  },
+  "std::hint::assert_unchecked": {
+    "contracts": {
+      "cond": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "cond"
+    ]
+  },
+  "std::hint::unreachable_unchecked": {
+    "contracts": {
+      "function_precondition": [
+        "Unreachable"
+      ]
+    },
+    "params": []
+  },
+  "std::io::BorrowedBuf::set_init": {
+    "contracts": {
+      "n": [
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "n"
+    ]
+  },
+  "std::io::BorrowedCursor::advance_unchecked": {
+    "contracts": {
+      "n": [
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "n"
+    ]
+  },
+  "std::io::BorrowedCursor::as_mut": {
+    "contracts": {
+      "function_precondition": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::io::BorrowedCursor::set_init": {
+    "contracts": {
+      "n": [
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "n"
+    ]
+  },
+  "std::io::IoSlice::align_to": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::io::IoSlice::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::io::IoSlice::as_chunks_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "std::io::IoSlice::get_unchecked": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "std::io::IoSlice::split_at_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "std::io::IoSliceMut::align_to": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::io::IoSliceMut::align_to_mut": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::io::IoSliceMut::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::io::IoSliceMut::as_chunks_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "std::io::IoSliceMut::as_chunks_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "std::io::IoSliceMut::get_disjoint_unchecked_mut": {
+    "contracts": {
+      "indices": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "indices"
+    ]
+  },
+  "std::io::IoSliceMut::get_unchecked": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "std::io::IoSliceMut::get_unchecked_mut": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "std::io::IoSliceMut::split_at_mut_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "std::io::IoSliceMut::split_at_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "std::io::IoSliceMut::swap_unchecked": {
+    "contracts": {
+      "a": [
+        "InBounded"
+      ],
+      "b": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "a",
+      "b"
+    ]
+  },
+  "std::iter::Step::backward_unchecked": {
+    "contracts": {
+      "count": [
+        "ValidNum"
+      ],
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "count"
+    ]
+  },
+  "std::iter::Step::forward_unchecked": {
+    "contracts": {
+      "count": [
+        "ValidNum"
+      ],
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "count"
+    ]
+  },
+  "std::mem::ManuallyDrop::drop": {
+    "contracts": {
+      "slot": [
+        "Allocated"
+      ]
+    },
+    "params": [
+      "slot"
+    ]
+  },
+  "std::mem::ManuallyDrop::take": {
+    "contracts": {
+      "slot": [
+        "Ownning"
+      ]
+    },
+    "params": [
+      "slot"
+    ]
+  },
+  "std::mem::MaybeUninit::array_assume_init": {
+    "contracts": {
+      "array": [
+        "Init"
+      ]
+    },
+    "params": [
+      "array"
+    ]
+  },
+  "std::mem::MaybeUninit::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::mem::MaybeUninit::assume_init_drop": {
+    "contracts": {
+      "self": [
+        "Init",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::mem::MaybeUninit::assume_init_mut": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::mem::MaybeUninit::assume_init_read": {
+    "contracts": {
+      "self": [
+        "Init",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::mem::MaybeUninit::assume_init_ref": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::mem::TransmuteFrom::transmute": {
+    "contracts": {
+      "src": [
+        "DoubleAligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "std::mem::align_of_val_raw": {
+    "contracts": {
+      "val": [
+        "Size",
+        "ValidSlice",
+        "ValidTraitObj"
+      ]
+    },
+    "params": [
+      "val"
+    ]
+  },
+  "std::mem::size_of_val_raw": {
+    "contracts": {
+      "val": [
+        "Size",
+        "ValidSlice",
+        "ValidTraitObj"
+      ]
+    },
+    "params": [
+      "val"
+    ]
+  },
+  "std::mem::transmute": {
+    "contracts": {
+      "src": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "std::mem::transmute_copy": {
+    "contracts": {
+      "src": [
+        "DoubleAligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "std::mem::uninitialized": {
+    "contracts": {
+      "function_precondition": [
+        "ValidNum"
+      ]
+    },
+    "params": []
+  },
+  "std::mem::zeroed": {
+    "contracts": {
+      "function_precondition": [
+        "Typed"
+      ]
+    },
+    "params": []
+  },
+  "std::num::NonZero::from_mut_unchecked": {
+    "contracts": {
+      "n": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "n"
+    ]
+  },
+  "std::num::NonZero::new_unchecked": {
+    "contracts": {
+      "n": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "n"
+    ]
+  },
+  "std::num::NonZero::unchecked_add": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "std::num::NonZero::unchecked_mul": {
+    "contracts": {
+      "rhs": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "rhs"
+    ]
+  },
+  "std::option::Option::unwrap_unchecked": {
+    "contracts": {
+      "self": [
+        "Unwrap"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::os::fd::BorrowedFd::borrow_raw": {
+    "contracts": {
+      "fd": [
+        "Opened",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::fd::net::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::fd::owned::borrow_raw": {
+    "contracts": {
+      "fd": [
+        "Opened",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::fd::owned::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::fd::raw::FromRawFd::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::fd::raw::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::linux::process::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::solid::io::borrow_raw": {
+    "contracts": {
+      "fd": [
+        "Opened",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::unix::net::datagram::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::unix::net::listener::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::unix::net::stream::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::unix::process::CommandExt::before_exec": {
+    "contracts": {
+      "f": [
+        "System_sp"
+      ],
+      "self": [
+        "System_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "f"
+    ]
+  },
+  "std::os::unix::process::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::os::unix::process::pre_exec": {
+    "contracts": {
+      "f": [
+        "System_sp"
+      ],
+      "self": [
+        "System_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "f"
+    ]
+  },
+  "std::os::windows::io::BorrowedHandle::borrow_raw": {
+    "contracts": {
+      "handle": [
+        "Opened",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "handle"
+    ]
+  },
+  "std::os::windows::io::BorrowedSocket::borrow_raw": {
+    "contracts": {
+      "socket": [
+        "Opened",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "socket"
+    ]
+  },
+  "std::os::windows::io::HandleOrInvalid::from_raw_handle": {
+    "contracts": {
+      "handle": [
+        "System_sp"
+      ]
+    },
+    "params": [
+      "handle"
+    ]
+  },
+  "std::os::windows::io::HandleOrNull::from_raw_handle": {
+    "contracts": {
+      "handle": [
+        "System_sp"
+      ]
+    },
+    "params": [
+      "handle"
+    ]
+  },
+  "std::os::windows::io::handle::borrow_raw": {
+    "contracts": {
+      "handle": [
+        "Opened",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "handle"
+    ]
+  },
+  "std::os::windows::io::socket::borrow_raw": {
+    "contracts": {
+      "socket": [
+        "Opened",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "socket"
+    ]
+  },
+  "std::os::windows::process::ProcThreadAttributeListBuilder::raw_attribute": {
+    "contracts": {
+      "value_ptr": [
+        "Alive"
+      ],
+      "value_size": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "attribute",
+      "value_ptr",
+      "value_size"
+    ]
+  },
+  "std::os::windows::process::raw_attribute": {
+    "contracts": {
+      "value_ptr": [
+        "Alive"
+      ],
+      "value_size": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "attribute",
+      "value_ptr",
+      "value_size"
+    ]
+  },
+  "std::path::clone_to_uninit": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "dst"
+    ]
+  },
+  "std::pin::Pin::get_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::pin::Pin::into_inner_unchecked": {
+    "contracts": {
+      "pointer": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "pointer"
+    ]
+  },
+  "std::pin::Pin::map_unchecked": {
+    "contracts": {
+      "self": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "self",
+      "func"
+    ]
+  },
+  "std::pin::Pin::map_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "self",
+      "func"
+    ]
+  },
+  "std::pin::Pin::new_unchecked": {
+    "contracts": {
+      "pointer": [
+        "Pinned"
+      ]
+    },
+    "params": [
+      "pointer"
+    ]
+  },
+  "std::ptr::Alignment::new_unchecked": {
+    "contracts": {
+      "align": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "align"
+    ]
+  },
+  "std::ptr::NonNull::add": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::as_mut": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ptr::NonNull::as_ref": {
+    "contracts": {
+      "self": [
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ptr::NonNull::as_uninit_mut": {
+    "contracts": {
+      "self": [
+        "!Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ptr::NonNull::as_uninit_ref": {
+    "contracts": {
+      "self": [
+        "!Null | ",
+        "ValidPtr2Ref"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ptr::NonNull::as_uninit_slice": {
+    "contracts": {
+      "self": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ptr::NonNull::as_uninit_slice_mut": {
+    "contracts": {
+      "self": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ptr::NonNull::byte_add": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::byte_offset": {
+    "contracts": {
+      "count": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::byte_offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "std::ptr::NonNull::byte_offset_from_unsigned": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "std::ptr::NonNull::byte_sub": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::copy_from": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "src",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::copy_from_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "src",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::copy_to": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "dest": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "self",
+      "dest",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::copy_to_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "dest": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "CopyTrait",
+        "Alias"
+      ]
+    },
+    "params": [
+      "self",
+      "dest",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::drop_in_place": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ptr::NonNull::get_unchecked_mut": {
+    "contracts": {
+      "self": [
+        "ValidNum",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "std::ptr::NonNull::new_unchecked": {
+    "contracts": {
+      "ptr": [
+        "!Null"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::ptr::NonNull::offset": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::offset_from": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "std::ptr::NonNull::offset_from_unsigned": {
+    "contracts": {
+      "origin": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum",
+        "!Size"
+      ]
+    },
+    "params": [
+      "self",
+      "origin"
+    ]
+  },
+  "std::ptr::NonNull::read": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ptr::NonNull::read_unaligned": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ptr::NonNull::read_volatile": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "CopyTrait",
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::ptr::NonNull::replace": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "Init"
+      ]
+    },
+    "params": [
+      "self",
+      "src"
+    ]
+  },
+  "std::ptr::NonNull::sub": {
+    "contracts": {
+      "count": [
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::swap": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ],
+      "with": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "with"
+    ]
+  },
+  "std::ptr::NonNull::write": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "std::ptr::NonNull::write_bytes": {
+    "contracts": {
+      "count": [
+        "ValidPtr"
+      ],
+      "self": [
+        "ValidPtr",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self",
+      "val",
+      "count"
+    ]
+  },
+  "std::ptr::NonNull::write_unaligned": {
+    "contracts": {
+      "self": [
+        "ValidPtr"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "std::ptr::NonNull::write_volatile": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "val"
+    ]
+  },
+  "std::ptr::copy": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "!Volatile"
+      ],
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src",
+      "dst",
+      "count"
+    ]
+  },
+  "std::ptr::copy_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap",
+        "!Volatile"
+      ],
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ],
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap",
+        "!Volatile",
+        "Alias",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src",
+      "dst",
+      "count"
+    ]
+  },
+  "std::ptr::drop_in_place": {
+    "contracts": {
+      "to_drop": [
+        "ValidPtr",
+        "Aligned",
+        "!Null"
+      ]
+    },
+    "params": [
+      "to_drop"
+    ]
+  },
+  "std::ptr::read": {
+    "contracts": {
+      "src": [
+        "ValidPtr",
+        "Aligned",
+        "Init",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "std::ptr::read_unaligned": {
+    "contracts": {
+      "src": [
+        "ValidPtr",
+        "Init",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "std::ptr::read_volatile": {
+    "contracts": {
+      "src": [
+        "ValidPtr",
+        "Init",
+        "Aligned",
+        "CopyTrait"
+      ]
+    },
+    "params": [
+      "src"
+    ]
+  },
+  "std::ptr::replace": {
+    "contracts": {
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "Init"
+      ]
+    },
+    "params": [
+      "dst",
+      "src"
+    ]
+  },
+  "std::ptr::swap": {
+    "contracts": {
+      "x": [
+        "ValidPtr",
+        "Aligned"
+      ],
+      "y": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "x",
+      "y"
+    ]
+  },
+  "std::ptr::swap_nonoverlapping": {
+    "contracts": {
+      "count": [
+        "ValidPtr",
+        "NonOverlap"
+      ],
+      "x": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap"
+      ],
+      "y": [
+        "ValidPtr",
+        "Aligned",
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "x",
+      "y",
+      "count"
+    ]
+  },
+  "std::ptr::write": {
+    "contracts": {
+      "dst": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "dst",
+      "src"
+    ]
+  },
+  "std::ptr::write_bytes": {
+    "contracts": {
+      "count": [
+        "ValidPtr"
+      ],
+      "dst": [
+        "ValidPtr",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "dst",
+      "val",
+      "count"
+    ]
+  },
+  "std::ptr::write_unaligned": {
+    "contracts": {
+      "dst": [
+        "ValidPtr"
+      ]
+    },
+    "params": [
+      "dst",
+      "src"
+    ]
+  },
+  "std::ptr::write_volatile": {
+    "contracts": {
+      "dst": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "dst",
+      "src"
+    ]
+  },
+  "std::range::Step::backward_unchecked": {
+    "contracts": {
+      "count": [
+        "ValidNum"
+      ],
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "count"
+    ]
+  },
+  "std::range::Step::forward_unchecked": {
+    "contracts": {
+      "count": [
+        "ValidNum"
+      ],
+      "start": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "start",
+      "count"
+    ]
+  },
+  "std::raw_attribute": {
+    "contracts": {
+      "attr": [
+        "Alive",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "attr"
+    ]
+  },
+  "std::rc::Rc::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::rc::Rc::decrement_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::rc::Rc::decrement_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "std::rc::Rc::downcast_unchecked": {
+    "contracts": {
+      "self": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::rc::Rc::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::rc::Rc::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "std::rc::Rc::get_mut_unchecked": {
+    "contracts": {
+      "this": [
+        "Typed",
+        "Alias"
+      ]
+    },
+    "params": [
+      "this"
+    ]
+  },
+  "std::rc::Rc::increment_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::rc::Rc::increment_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "std::rc::Weak::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::rc::Weak::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "std::result::Result::unwrap_err_unchecked": {
+    "contracts": {
+      "self": [
+        "Unwrap"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::result::Result::unwrap_unchecked": {
+    "contracts": {
+      "self": [
+        "Unwrap"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::slice::from_mut_ptr_range": {
+    "contracts": {
+      "range": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "range"
+    ]
+  },
+  "std::slice::from_ptr_range": {
+    "contracts": {
+      "range": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "range"
+    ]
+  },
+  "std::slice::from_raw_parts": {
+    "contracts": {
+      "data": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ],
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "data",
+      "len"
+    ]
+  },
+  "std::slice::from_raw_parts_mut": {
+    "contracts": {
+      "data": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "Aligned",
+        "ValidNum"
+      ],
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "data",
+      "len"
+    ]
+  },
+  "std::str::from_boxed_utf8_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "std::str::from_raw_parts": {
+    "contracts": {
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "len"
+    ]
+  },
+  "std::str::from_raw_parts_mut": {
+    "contracts": {
+      "len": [
+        "ValidPtr",
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "!Null",
+        "ValidPtr",
+        "Init",
+        "Alive",
+        "Alias",
+        "ValidNum",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "len"
+    ]
+  },
+  "std::str::from_utf8_unchecked": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "std::str::from_utf8_unchecked_mut": {
+    "contracts": {
+      "v": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "v"
+    ]
+  },
+  "std::string::String::as_ascii_unchecked": {
+    "contracts": {
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::string::String::as_bytes_mut": {
+    "contracts": {
+      "self": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::string::String::as_mut_vec": {
+    "contracts": {
+      "self": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::string::String::from_raw_parts": {
+    "contracts": {
+      "buf": [
+        "Allocated",
+        "Aligned",
+        "ValidNum",
+        "ValidString"
+      ],
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "Init",
+        "ValidNum",
+        "ValidString"
+      ]
+    },
+    "params": [
+      "buf",
+      "length",
+      "capacity"
+    ]
+  },
+  "std::string::String::from_utf8_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "std::string::String::get_unchecked": {
+    "contracts": {
+      "i": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "i"
+    ]
+  },
+  "std::string::String::get_unchecked_mut": {
+    "contracts": {
+      "i": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "i"
+    ]
+  },
+  "std::string::String::slice_mut_unchecked": {
+    "contracts": {
+      "begin": [
+        "ValidString",
+        "InBounded"
+      ],
+      "end": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "begin",
+      "end"
+    ]
+  },
+  "std::string::String::slice_unchecked": {
+    "contracts": {
+      "begin": [
+        "ValidString",
+        "InBounded"
+      ],
+      "end": [
+        "ValidString",
+        "InBounded"
+      ],
+      "self": [
+        "ValidString",
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "begin",
+      "end"
+    ]
+  },
+  "std::sync::Arc::assume_init": {
+    "contracts": {
+      "self": [
+        "Init"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::sync::Arc::decrement_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::Arc::decrement_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "std::sync::Arc::downcast_unchecked": {
+    "contracts": {
+      "self": [
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::sync::Arc::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::Arc::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "std::sync::Arc::get_mut_unchecked": {
+    "contracts": {
+      "this": [
+        "Typed",
+        "Alias"
+      ]
+    },
+    "params": [
+      "this"
+    ]
+  },
+  "std::sync::Arc::increment_strong_count": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::Arc::increment_strong_count_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Typed",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "std::sync::Weak::from_raw": {
+    "contracts": {
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::Weak::from_raw_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "Ownning",
+        "Typed"
+      ]
+    },
+    "params": [
+      "ptr",
+      "alloc"
+    ]
+  },
+  "std::sync::atomic::AtomicBool::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicI16::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicI32::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicI64::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicI8::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicIsize::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicPtr::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicU16::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicU32::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicU64::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicU8::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sync::atomic::AtomicUsize::from_ptr": {
+    "contracts": {
+      "ptr": [
+        "ValidPtr",
+        "Aligned",
+        "Alias",
+        "Alive"
+      ]
+    },
+    "params": [
+      "ptr"
+    ]
+  },
+  "std::sys::anonymous_pipe::unix::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::sys::os_str::bytes::clone_to_uninit": {
+    "contracts": {
+      "self": [
+        "ValidPtr",
+        "Aligned"
+      ]
+    },
+    "params": [
+      "self",
+      "dst"
+    ]
+  },
+  "std::sys::os_str::bytes::from_encoded_bytes_unchecked": {
+    "contracts": {
+      "bytes": [
+        "ValidString"
+      ]
+    },
+    "params": [
+      "bytes"
+    ]
+  },
+  "std::sys::pal::unix::fd::from_raw_fd": {
+    "contracts": {
+      "raw_fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "raw_fd"
+    ]
+  },
+  "std::sys::pal::unix::fs::from_raw_fd": {
+    "contracts": {
+      "raw_fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "raw_fd"
+    ]
+  },
+  "std::sys::pal::unix::linux::pidfd::from_raw_fd": {
+    "contracts": {
+      "fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "fd"
+    ]
+  },
+  "std::sys::pal::unix::net::from_raw_fd": {
+    "contracts": {
+      "raw_fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "raw_fd"
+    ]
+  },
+  "std::sys::pal::unix::pipe::from_raw_fd": {
+    "contracts": {
+      "raw_fd": [
+        "Opened"
+      ]
+    },
+    "params": [
+      "raw_fd"
+    ]
+  },
+  "std::sys::pal::unix::process::process_common::pre_exec": {
+    "contracts": {
+      "f": [
+        "System_sp"
+      ],
+      "self": [
+        "System_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "f"
+    ]
+  },
+  "std::task::LocalWaker::from_raw": {
+    "contracts": {
+      "waker": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "waker"
+    ]
+  },
+  "std::task::LocalWaker::new": {
+    "contracts": {
+      "data": [
+        "Function_sp"
+      ],
+      "vtable": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "data",
+      "vtable"
+    ]
+  },
+  "std::task::Waker::from_raw": {
+    "contracts": {
+      "waker": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "waker"
+    ]
+  },
+  "std::task::Waker::new": {
+    "contracts": {
+      "data": [
+        "Function_sp"
+      ],
+      "vtable": [
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "data",
+      "vtable"
+    ]
+  },
+  "std::thread::Builder::spawn_unchecked": {
+    "contracts": {
+      "f": [
+        "Alive",
+        "Init",
+        "Function_sp"
+      ],
+      "self": [
+        "Alive",
+        "Init",
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "f"
+    ]
+  },
+  "std::thread::Thread::from_raw": {
+    "contracts": {
+      "inner": [
+        "Ownning",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "inner"
+    ]
+  },
+  "std::thread::from_raw": {
+    "contracts": {
+      "inner": [
+        "Ownning",
+        "Allocated"
+      ]
+    },
+    "params": [
+      "inner"
+    ]
+  },
+  "std::thread::spawn_unchecked": {
+    "contracts": {
+      "f": [
+        "Alive",
+        "Init",
+        "Function_sp"
+      ],
+      "self": [
+        "Alive",
+        "Init",
+        "Function_sp"
+      ]
+    },
+    "params": [
+      "self",
+      "f"
+    ]
+  },
+  "std::vec::Vec::align_to": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::vec::Vec::align_to_mut": {
+    "contracts": {
+      "self": [
+        "Aligned",
+        "Typed"
+      ]
+    },
+    "params": [
+      "self"
+    ]
+  },
+  "std::vec::Vec::as_chunks_unchecked": {
+    "contracts": {
+      "N": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "std::vec::Vec::as_chunks_unchecked_mut": {
+    "contracts": {
+      "N": [
+        "ValidNum"
+      ],
+      "self": [
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "N"
+    ]
+  },
+  "std::vec::Vec::from_parts": {
+    "contracts": {
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity"
+    ]
+  },
+  "std::vec::Vec::from_parts_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity",
+      "alloc"
+    ]
+  },
+  "std::vec::Vec::from_raw_parts": {
+    "contracts": {
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity"
+    ]
+  },
+  "std::vec::Vec::from_raw_parts_in": {
+    "contracts": {
+      "alloc": [
+        "Allocated"
+      ],
+      "capacity": [
+        "Allocated",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ],
+      "length": [
+        "Init",
+        "ValidNum"
+      ],
+      "ptr": [
+        "Allocated",
+        "Aligned",
+        "InBounded",
+        "ValidNum",
+        "Layout"
+      ]
+    },
+    "params": [
+      "ptr",
+      "length",
+      "capacity",
+      "alloc"
+    ]
+  },
+  "std::vec::Vec::get_disjoint_unchecked_mut": {
+    "contracts": {
+      "indices": [
+        "NonOverlap"
+      ],
+      "self": [
+        "NonOverlap"
+      ]
+    },
+    "params": [
+      "self",
+      "indices"
+    ]
+  },
+  "std::vec::Vec::get_unchecked": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "std::vec::Vec::get_unchecked_mut": {
+    "contracts": {
+      "index": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "index"
+    ]
+  },
+  "std::vec::Vec::set_len": {
+    "contracts": {
+      "new_len": [
+        "Init",
+        "InBounded",
+        "ValidNum"
+      ],
+      "self": [
+        "InBounded",
+        "ValidNum"
+      ]
+    },
+    "params": [
+      "self",
+      "new_len"
+    ]
+  },
+  "std::vec::Vec::split_at_mut_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "std::vec::Vec::split_at_unchecked": {
+    "contracts": {
+      "mid": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "mid"
+    ]
+  },
+  "std::vec::Vec::swap_unchecked": {
+    "contracts": {
+      "a": [
+        "InBounded"
+      ],
+      "b": [
+        "InBounded"
+      ],
+      "self": [
+        "InBounded"
+      ]
+    },
+    "params": [
+      "self",
+      "a",
+      "b"
+    ]
+  }
+}

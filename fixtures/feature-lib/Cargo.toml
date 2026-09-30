@@ -1,0 +1,11 @@
+[package]
+name = "feature-lib"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = []
+extra = []
+
+[lib]
+path = "src/lib.rs"

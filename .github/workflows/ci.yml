@@ -1,0 +1,34 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - run: rustup show
+      - run: cargo fmt -- --check
+      - name: Checkout matching verifier
+        uses: actions/checkout@v5
+        with:
+          repository: huanli-00/varies-kani
+          ref: 805bfdc11e93f5a39b375e83d5a5632eee7169d0
+          path: target/ci/varies-kani
+      - uses: ./target/ci/varies-kani/.github/actions/setup
+        with:
+          os: ubuntu-24.04
+          kani_dir: target/ci/varies-kani
+      - name: Build verifier
+        working-directory: target/ci/varies-kani
+        run: |
+          cargo build-dev -- --release
+          echo "$PWD/scripts" >> "$GITHUB_PATH"
+      - run: cargo test --locked
+      - name: Check experiment scripts
+        run: |
+          bash -n scripts/build_experiment_container.sh scripts/run_in_experiment_container.sh
+          python3 -m py_compile scripts/paper_backend_execution.py

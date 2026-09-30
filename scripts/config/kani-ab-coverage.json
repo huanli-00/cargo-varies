@@ -1,0 +1,27 @@
+{
+  "varies_kani": {
+    "repo": "https://github.com/huanli-00/varies-kani.git",
+    "command": "cargo-varies-kani"
+  },
+  "verify_cmd": [
+    "cargo-varies-kani",
+    "--output-format",
+    "terse",
+    "--default-unwind",
+    "4",
+    "--no-unwinding-checks",
+    "--assert-as-assume",
+    "--skip-unsupported-check",
+    "-Z",
+    "unstable-options",
+    "--concrete-playback",
+    "inplace",
+    "-Z",
+    "concrete-playback",
+    "--error-recovery",
+    "--synth-pruning",
+    "failure-only",
+    "--harness-timeout",
+    "20m"
+  ]
+}
